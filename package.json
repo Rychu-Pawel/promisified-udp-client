@@ -1,0 +1,51 @@
+{
+    "name": "promisified-udp-client",
+    "version": "1.0.0",
+    "description": "Simple way to create UDP clients with a promise-based interface",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Rychu-Pawel/promisified-udp-client.git"
+    },
+    "keywords": [
+        "UDP",
+        "promise",
+        "client"
+    ],
+    "author": "Rychu",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Rychu-Pawel/promisified-udp-client/issues"
+    },
+    "homepage": "https://github.com/Rychu-Pawel/promisified-udp-client#readme",
+    "main": "dist/src/index.js",
+    "type": "module",
+    "files": [
+        "dist/src"
+    ],
+    "scripts": {
+        "test": "yarn build && ava",
+        "test:ci": "ava --tap",
+        "eslint": "eslint src test",
+        "eslint:ci": "yarn eslint",
+        "clean": "del-cli --force dist",
+        "build": "yarn clean && tsc",
+        "build:ci": "yarn build"
+    },
+    "devDependencies": {
+        "@tsconfig/node20": "^20",
+        "@types/node": "^20.14.10",
+        "@typescript-eslint/eslint-plugin": "^7.1.1",
+        "@typescript-eslint/parser": "^7.1.1",
+        "ava": "^6.0.0",
+        "del-cli": "^5.0.0",
+        "eslint": "^8.0.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.26.0",
+        "typescript": "^5.0.4"
+    },
+    "ava": {
+        "files": [
+            "dist/test/**/*.spec.js"
+        ]
+    }
+}
